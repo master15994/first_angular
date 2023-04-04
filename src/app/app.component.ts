@@ -8,6 +8,8 @@ import { timeout } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  backgroundToggle = false;
+  simple = 'grab yours eyes';
   inputValue = '';
   title = 'Fisrt Step in Angular btch';
   number = 99;

@@ -1,4 +1,24 @@
 <img [src]="img" style="margin-left: 30rem; padding: 2rem" />
+
+<div
+  [ngStyle]="{
+    width: '20rem',
+    height: '20rem',
+    borderRadius: '5px',
+    border: '2px solid black',
+    background: backgroundToggle ? 'orange' : 'purple'
+  }"
+></div>
+<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+
+<p
+  [ngClass]="{
+    red: backgroundToggle,
+    blue: !backgroundToggle
+  }"
+>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, saepe?
+</p>
 <p style="font-size: 2rem">
   <i>{{ title }}</i>
 </p>
@@ -9,6 +29,6 @@
 </p>
 <app-post></app-post>
 <hr />
-<app-post2></app-post2>
 
 <button (click)="onClick()">Click!</button>
+<hr />
