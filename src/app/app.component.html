@@ -1,4 +1,14 @@
-<div>Привет</div>
-<input type="number" name="number" class="number" />
-
+<img [src]="img" style="margin-left: 30rem; padding: 2rem" />
+<p style="font-size: 2rem">
+  <i>{{ title }}</i>
+</p>
+<hr />
+<input type="text" (input)="onInput($event)" />
+<p>
+  <i>{{ inputValue }}</i>
+</p>
 <app-post></app-post>
+<hr />
+<app-post2></app-post2>
+
+<button (click)="onClick()">Click!</button>
