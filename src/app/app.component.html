@@ -1,31 +1,7 @@
-<img [src]="img" style="margin-left: 30rem; padding: 2rem; width: 20rem" />;
+<div class="container">
+  <h1>Angular Components</h1>
 
-<!-- -------------------------- Pipes | ------------------------------ -->
-
-<p>
-  <strong>{{ time | date | uppercase }}</strong>
-</p>
-
-<!-- -------------------------- Циклы *ngFor of  ------------------------------ -->
-<ul>
-  <li *ngFor="let num of arr; let id = index">
-    {{ id + 1 }} <strong> - {{ num }}</strong>
-  </li>
-</ul>
-
-<ul style="list-style: none">
-  <li *ngFor="let post of objs">
-    <p>
-      <strong>{{ post.title }}</strong>
-    </p>
-    <p>
-      <i>{{ post.author }}</i>
-    </p>
-
-    <ul>
-      <li *ngFor="let comment of post.comment">
-        {{ comment.name }} ; {{ comment.text }}
-      </li>
-    </ul>
-  </li>
-</ul>
+  <app-post-form (onAdd)="updatePosts($event)"></app-post-form>
+  <hr />
+  <app-post *ngFor="let p of posts" [post]="p"></app-post>
+</div>
