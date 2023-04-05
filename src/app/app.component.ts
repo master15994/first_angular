@@ -8,11 +8,29 @@ import { timeout } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  backgroundToggle = false;
-  simple = 'grab yours eyes';
-  inputValue = '';
-  title = 'Fisrt Step in Angular btch';
-  number = 99;
+  time: Date = new Date();
+  objs = [
+    {
+      title: 'Post-1',
+      author: 'Bekan',
+      comment: [
+        { name: 'Bek', text: 'lorem-1' },
+        { name: 'Bek', text: 'lorem-1' },
+        { name: 'Bek', text: 'lorem-1' },
+      ],
+    },
+
+    {
+      title: 'Post-2',
+      author: 'Bekan-2',
+      comment: [
+        { name: 'Bek-2', text: 'lorem-1' },
+        { name: 'Bek-2', text: 'lorem-1' },
+        { name: 'Bek-2', text: 'lorem-1' },
+      ],
+    },
+  ];
+  arr = [1, 1, 2, 3, 4, 8];
   img =
     'https://icones.pro/wp-content/uploads/2022/07/icone-angulaire-vert.png';
   constructor() {
@@ -21,14 +39,5 @@ export class AppComponent {
       this.img =
         'https://icones.pro/wp-content/uploads/2022/07/icone-angulaire-jaune.png';
     }, 3000);
-  }
-
-  onInput(event?: any) {
-    console.log('Event', event);
-    this.inputValue = event.target.value;
-  }
-
-  onClick() {
-    console.log('Shit man');
   }
 }
