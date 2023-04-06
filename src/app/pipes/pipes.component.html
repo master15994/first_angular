@@ -1,0 +1,26 @@
+<h1>Angular Pipes</h1>
+
+<!-- ------------------------- Pipe Number ---------------------------- -->
+<p>{{ e }}</p>
+<p>{{ e | number : "1.1 - 3 " }}</p>
+<p>{{ e | number : "3.0-0" }}</p>
+<hr />
+
+<!-- ------------------------- Pipe String ---------------------------- -->
+<p>{{ str | uppercase | lowercase | titlecase }}</p>
+<p>{{ str | slice : 1 - 1 }}</p>
+
+<hr />
+<!-- ------------------------- Pipe Date ---------------------------- -->
+<p>{{ date }}</p>
+<p>{{ date | date }}</p>
+<p>{{ date | date : "fullDate" }}</p>
+<p>{{ date | date : "MMMM , yyyy, dd" }}</p>
+
+<hr />
+<p>{{ float }}</p>
+<p>{{ float | percent }}</p>
+<p>{{ float | currency }}</p>
+
+<hr />
+<pre>{{ obj | json }}</pre>
