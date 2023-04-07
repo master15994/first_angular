@@ -5,7 +5,7 @@ import { timeout } from 'rxjs';
 export interface Post {
   title: string;
   text: string;
-  id?: number;
+  [key: string]: string;
 }
 
 @Component({
@@ -14,6 +14,20 @@ export interface Post {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  addPost() {
+    this.posts.unshift({
+      title: 'Angular Newest',
+      text: 'Bekan new Suit',
+    });
+  }
+
+  search = '';
+  searchField = 'title';
+  posts: Post[] = [
+    { title: 'Beer', text: 'Самое лучшие пиво в мире' },
+    { title: 'Bread', text: 'Самое лучшие хлеб в мире' },
+    { title: 'JS', text: 'Самое лучшие язык в мире' },
+  ];
   e: number = Math.E;
   str = 'see u tomorrow ';
 
